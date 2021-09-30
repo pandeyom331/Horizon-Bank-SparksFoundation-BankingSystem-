@@ -3,9 +3,9 @@ const app = express();
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 require('dotenv').config();
-const Customer = require("./models/UserSchema");
-const Transaction = require("./models/TransactionSchema");
-const Datab = require("./models/Schema");
+const Customer = require("./Models/UserSchema");
+const Transaction = require("./Models/TransactionSchema");
+const Datab = require("./Models/Schema");
 
 mongoose.connect(process.env.URI || "mongodb://localhost:27017/banking", 
     { 
