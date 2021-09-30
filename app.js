@@ -7,8 +7,6 @@ const Customer = require("./models/UserSchema");
 const Transaction = require("./models/TransactionSchema");
 const Datab = require("./models/Schema");
 
-let port = process.env.PORT;
-
 mongoose.connect(process.env.URI || "mongodb://localhost:27017/banking", 
     { 
         useUnifiedTopology: true, 
@@ -123,11 +121,6 @@ app.all("*", (req, res) => {
     res.render("Error");
 });
 
-if(port == null || port == "")
-{
-    port = 5000;
-}
-
-app.listen(port, (req, res) => {
-    console.log(`Connected on server : ${port}`);
+app.listen(process.env.PORT || 3000, (req, res) => {
+    console.log("Connected on server : 3000");
 });
