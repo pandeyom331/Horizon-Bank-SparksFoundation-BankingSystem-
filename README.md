@@ -7,7 +7,7 @@ Created using Node.js, Express.js, MongoDB, Ejs, BootStrap, HTML, CSS and Deploy
 <p>
     <ul>
       <li>This website is small scale stimulation of a real banking website.</li>
-       <li>Users Can transfer money to other users, Initially, every user has Rs 500 and wherever he/she transfers money from their account to another account, that much amount will get deducted from his/her account and it will be added to another user account and vice-versa.</li>
+       <li>Users Can transfer money to other users, Initially, every user has Rs 500 and whenever he/she transfers money from their account to another account, that much amount will get deducted from his/her account and it will be added to another user account and vice-versa.</li>
   
   <li>All transactions done among the users will be displayed in the All transaction section.</li>
   
