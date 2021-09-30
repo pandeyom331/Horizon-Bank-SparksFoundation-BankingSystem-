@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Customer = require("./Models/UserSchema");
 
-mongoose.connect("mongodb+srv://ompandey:ompandey@cluster0.sgwep.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(process.env.URI , { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         console.log("connected");
     })
