@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3 style="text-transform: capitalize;">
+                    <%= data.username %> All transactions
+                </h3>
+            </div>
+            <ul class="list-group lsit-group-flush">
+                <% if(data.transactions.length > 0) { %>
+                    <% for(let i of data.transactions) {%>
+                        <li class="list-group-item" style="text-transform: capitalize;">
+                            <%= i.Description %> <b>-----</b> <i><%= i.comment %></i> <b>----- <%= i.Date %></b>
+                          </li>
+                          <% } %>
+                  <% } else { %>
+                      <li class="list-group-item" style="text-transform: capitalize;">
+                          Sorry! No transactions Yet........
+                      </li>
+                  <% } %>    
+            </ul>
+            <div class="card-body">
+                <a class="btn btn-success" href="/allCustomers/<%= data._id %>">Back</a>
+            </div>
+        </div>
+    </div>
+<%- include("partials/footer"); -%>

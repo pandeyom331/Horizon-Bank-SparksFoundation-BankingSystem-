@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+<div class="container">
+    <div class="row trn">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="card">
+              <div class="card-header" style="background-color: grey; color: ivory;">
+                 <h1>All Transactions</h1>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush" >
+                    <% if(detail.length > 0) { %>
+                        <% detail.forEach(function(i){ %>
+                            <li class="list-group-item" style="text-transform: capitalize; background-color: black; color: rgb(255, 255, 255);">
+                                <%= i.payment %> <b>----- <%= i.Date %></b>
+                            </li>
+                        <% })} else { %>
+                        <li class="list-group-item" style="text-transform: capitalize">
+                            Sorry! No transactions Yet........
+                        </li>
+                    <%} %>
+                </ul>
+              </div>
+           </div>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer"); -%>

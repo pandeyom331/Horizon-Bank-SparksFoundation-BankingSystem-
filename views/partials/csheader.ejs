@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/9bb8901042.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="assets/img/icon.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+
+    <title>Horizon First Bank</title>
+    <link rel = "icon" href = "/img/logo.png" type = "image/x-icon">
+
+    <style>
+        nav {
+            font-size: medium;
+            font-weight: 600;
+        }
+
+        .collapse {
+            justify-content: flex-end;
+        }
+
+        body {
+            background-color: rgb(63, 63, 63);
+        }
+
+        /* FOOTER */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            width: 55%;
+        }
+
+        .user-img {
+            width: 70%;
+        }
+
+        .card{
+            margin: 10px 0;
+        }
+
+        footer {
+            position: relative;
+            justify-content: end;
+            text-align: center;
+            width: 100%;
+            background-color: #010420;
+            color: rgb(255, 230, 91);
+            bottom: 0;
+            height: 80px;
+        }
+
+        .git {
+            color: #fff;
+            margin: 10px 10px;
+        }
+
+        .git:hover {
+            color: cyan;
+        }
+
+        @media only screen and (max-device-width: 480px) {
+            .user-img {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .user-img {
+                width: 100%;
+            }    
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="/img/logo.png" class="logo" alt="Horizon First Bank" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/" style="font-size: 20px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/allCustomers"  style="font-size: 20px;">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/allTransactions"  style="font-size: 20px;">Transactions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>

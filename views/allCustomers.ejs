@@ -1,0 +1,24 @@
+<%- include("partials/csheader"); -%>
+<div class="container">
+      <% customer.forEach(function(i) {  %>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <img src="<%= i.avatar %>" class="card-img-top user-img" alt="<%=i.username%>">
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card-body pb-1 pb-sm-0">
+                        <h5 class="card-title" style="text-transform: capitalize;">
+                            <b><%=i.username %></b>
+                        </h5>
+                        <p class="card-text">
+                            <%= i.about %>
+                        </p>
+                        <a class="btn btn-primary btn-sm" href="/allCustomers/<%= i._id %>">Details <i class="fas fa-info-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <% }) %>
+</div>
+<%- include("partials/footer"); -%>

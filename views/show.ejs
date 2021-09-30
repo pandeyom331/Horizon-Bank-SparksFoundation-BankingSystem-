@@ -1,0 +1,29 @@
+<%- include("partials/csheader"); -%>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <img src="<%=data.avatar %>" class="card-img-top" alt="<%= data.username %>">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-transform: capitalize;"><b>
+                        <%= data.username %>
+                    </b></h5>
+                    <a href="mailto:<%= data.email %>" class="card-text text-muted" style="text-decoration: none;"><i class="fa fa-envelope" aria-hidden="true"></i></i> <%= data.email %></a>
+                    <p class="card-text text-muted"><i class="fas fa-phone"><%=data.contact%></i></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Account Balance <b>Rs <%= data.Balance %></b></li>
+                    <li class="list-group-item text-muted"><b>About: </b>
+                        <%= data.about %>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <a class="btn btn-outline-danger" href="/allCustomers/<%= data._id %>/history">Transfer history <i class="fas fa-history"></i></a>
+                    <a class="btn btn-outline-success mt-1 mt-md-0" href="/allCustomers/<%= data._id %>/transfer">Transfer Money <i class="fas fa-money-bill"></i></a>
+                    <a class="btn btn-outline-primary mt-1 mt-sm-0" href="/">Home <i class="fas fa-home"></i></a>          
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer"); -%>
