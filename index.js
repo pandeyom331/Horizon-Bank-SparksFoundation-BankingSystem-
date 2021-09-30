@@ -7,7 +7,7 @@ const Customer = require("./models/UserSchema");
 const Transaction = require("./models/TransactionSchema");
 const Datab = require("./models/Schema");
 
-const PORT = process.env.PORT || 3000;
+let port = process.env.PORT;
 
 mongoose.connect(process.env.URI || "mongodb://localhost:27017/banking", 
     { 
@@ -123,6 +123,11 @@ app.all("*", (req, res) => {
     res.render("Error");
 });
 
-app.listen(PORT, (req, res) => {
-    console.log(`Connected on server : ${PORT}`);
+if(port == null || port == "")
+{
+    port = 5000;
+}
+
+app.listen(port, (req, res) => {
+    console.log(`Connected on server : ${port}`);
 });
